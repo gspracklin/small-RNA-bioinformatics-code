@@ -1,8 +1,7 @@
 """
 This Script searches for 5' barcodes allowing 1 mismatch. This script assumes
 5' barcodes are anchored (starting at index position 0). Once barcode is found
-the barcode is removed, as is the last nucleotide (Note: remove this feature if
-no complications removing the 3' adaptor).
+the barcode is removed.
 
 Name: barcode_splitter.py
 Author: George Spracklin
@@ -28,11 +27,11 @@ for line in fasta:
     if Levenshtein.distance(line[0:4],PP333) == 1:
         reads_in_file += 1
         f.write(last_line)
-        f.write(line[4:-2] + '\n')
+        f.write(line[4:] + '\n')
     if Levenshtein.distance(line[0:4],PP334) == 1:
         reads_in_file += 1
         z.write(last_line)
-        z.write(line[4:-2] + '\n')
+        z.write(line[4:] + '\n')
     last_line = line
 
 f.close()
