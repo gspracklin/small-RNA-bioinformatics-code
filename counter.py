@@ -1,3 +1,11 @@
+"""
+This script writes and counts all reads mapping to user defined chromosome interval. 
+
+v1.0
+Author:George Spracklin
+"""
+
+
 usr0 = input("What file (SAM format only) :")
 f = open(usr0, 'r')
 w = open(usr0 + '_oma-1', 'w')
