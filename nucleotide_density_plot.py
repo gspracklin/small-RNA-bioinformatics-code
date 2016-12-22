@@ -1,10 +1,9 @@
 """
 This script takes SAM file and parses based on chromosme and base position.
 Creates two files, sense reads and antisense reads. Then plots data using
-matlibplot.
+matlibplot. (Note: Matlibplot settings may need changing). 
 
-
-Script:sam.py
+Script:nucleotide_density_plot.py
 Author: George Spracklin
 v1.0
 """
