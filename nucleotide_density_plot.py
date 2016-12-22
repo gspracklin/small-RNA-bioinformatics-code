@@ -3,6 +3,8 @@ This script takes SAM file and parses based on chromosme and base position.
 Creates two files, sense reads and antisense reads. Then plots data using
 matlibplot. (Note: Matlibplot settings may need changing). 
 
+Add library size and normalization factor (internal controls) to normalize data.
+
 Script:nucleotide_density_plot.py
 Author: George Spracklin
 v1.0
@@ -39,17 +41,14 @@ print("finished scanning SAM file")
 ##############################################
 antisense_reads = []
 sense_reads = []
-anti_count = 0
 for line in mapped_siRNAs:
     read = len(line[9])
     start = int(line[3])
     if line[1] == '16':
         antisense_reads.append((start,read))
-        anti_count += 1
     if line[1] == '0':
         sense_reads.append((start,read))
 print("finished sorting sense/antisense")
-print("total mapped reads equals: ", anti_count)
 
 ##############################################
 #Sorting Sense and Antisense Reads
