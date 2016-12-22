@@ -3,10 +3,8 @@ This script takes SAM file and parses based on chromosme and base position.
 Creates two files, sense reads and antisense reads. Then plots data using
 matlibplot.
 
-How to run: from Terminal, have both locus_plot.py and SAM file in same folder.
-type: python3 locus_plot.py
 
-Script:locus_plot.py
+Script:sam.py
 Author: George Spracklin
 v1.0
 """
