@@ -1,10 +1,8 @@
 """
 This Script searches for 5' barcodes allowing 1 mismatch. This script assumes
-5' barcodes are anchored (starting at index position 0). Once barcode is found
-the barcode is removed, as is the last nucleotide (Note: remove this feature if
-no complications removing the 3' adaptor).
+5' barcodes are anchored (starting at index position 0). 
 
-Name: barcode_splitter.py
+Name: barcode_splitter2.py
 Author: George Spracklin
 Version: 1.1
 """
